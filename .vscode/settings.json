@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "StudyCenter",
+            "database": "my_pgdb",
+            "username": "postgres",
+            "password": "20010422"
+        }
+    ]
+}
