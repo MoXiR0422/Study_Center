@@ -4,11 +4,11 @@
 
 <template>
     <div class="w-[1800px] h-[940px] grid grid-flow-col  justify-between items-start">
-        <div class="w-[768px] h-[940px] flex items-center justify-center">
+        <div class="w-[900px] h-[940px] flex items-center justify-center">
             <img class="h-[640px] w-[640px]" src="../assets/image/Illustration.png" alt="">
         </div>
-        <div>
-            <div class="w-[768px] h-[940px] rounded-xl bg-white p-10">
+        <div class="w-[900px] flex justify-center">
+            <div class="w-[768px] h-[940px] rounded-xl bg-white p-10 text-center">
                 <h1 class="text-3xl">Welcom to</h1>
                 <h2 class="text-[#6358DC] font-bold text-5xl mt-2">You nine school</h2>
                 <button class="w-full h-[78px] shadow-[0_5px_15px_5px_rgba(0,0,0,0.2)] rounded-lg mt-12">
@@ -31,9 +31,9 @@
                     <hr class="h-[2px] w-full border-none bg-[lightgrey]"/>
                     <div class="w-20 absolute bg-white text-center mx-atuo">OR</div>
                 </div>
-                <form action="">
-                    <input type="text" name="" id="" placeholder="v1">
-                    <input type="text" name="" id="" placeholder="cv">
+                <form action="" class="mt-12 flex flex-col justify-between h-[350px] ">
+                    <input class="h-[77px] w-full rounded-xl bg-[#ECECEC] pl-6" type="text" name="" id="" placeholder="example@gmail.com">
+                    <input class="h-[77px] w-full rounded-xl bg-[#ECECEC] pl-6" type="password" name="" id="" placeholder="********">
                     <div class="w-full my-4 flex justify-between">
                         <span class="text-xl flex items-center">
                             <input class="h-[20px] w-[20px] mr-3" type="checkbox" name="" id="">
@@ -43,6 +43,7 @@
                     </div>
                     <button class="w-full h-[77px] rounded-xl bg-[#6358DC] text-[#ffffff] text-xl">Login</button>
                 </form>
+                <h2 class="mt-7 text-xl ">Don’t have an account? <a class="text-[#6358DC]">Register</a></h2>
             </div>
         </div>
     </div>
