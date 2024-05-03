@@ -1,5 +1,29 @@
 <script setup>
-
+    import { ref } from 'vue';
+    let email = ref('');
+    let password = ref('');
+    let changeHandlerInputEmail = (event) =>{
+        (event)=> email=event.target.value
+    }
+    let changeHandlerInputPassword = (event) =>{
+        (event)=> password=event.target.value
+    }
+    let somsa = () => {
+        fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(responseData => {
+          console.log(responseData);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
 </script>
 
 <template>
@@ -31,9 +55,9 @@
                     <hr class="h-[2px] w-full border-none bg-[lightgrey]"/>
                     <div class="w-20 absolute bg-white text-center mx-atuo">OR</div>
                 </div>
-                <form action="" class="mt-12 flex flex-col justify-between h-[350px] ">
-                    <input class="h-[77px] w-full rounded-xl bg-[#ECECEC] pl-6" type="text" name="" id="" placeholder="example@gmail.com">
-                    <input class="h-[77px] w-full rounded-xl bg-[#ECECEC] pl-6" type="password" name="" id="" placeholder="********">
+                <form action="" class="mt-12 flex flex-col justify-between h-[350px] " @submit.prevent>
+                    <input v-on:change="changeHandlerInputEmail(event)" v-model="email" class="h-[77px] w-full rounded-xl bg-[#ECECEC] pl-6" type="text" name="" id="" placeholder="example@gmail.com">
+                    <input v-on:change="changeHandlerInputPassword(event)" v-model="password" class="h-[77px] w-full rounded-xl bg-[#ECECEC] pl-6" type="password" name="" id="" placeholder="********">
                     <div class="w-full my-4 flex justify-between">
                         <span class="text-xl flex items-center">
                             <input class="h-[20px] w-[20px] mr-3" type="checkbox" name="" id="">
@@ -41,7 +65,7 @@
                         </span>
                         <a class="text-[#6358DC] font-semibold text-lg">Forgot Password?</a>
                     </div>
-                    <button class="w-full h-[77px] rounded-xl bg-[#6358DC] text-[#ffffff] text-xl">Login</button>
+                    <button type="submit" class="w-full h-[77px] rounded-xl bg-[#6358DC] text-[#ffffff] text-xl" @click="somsa()">Login</button>
                 </form>
                 <h2 class="mt-7 text-xl ">Don’t have an account? <a class="text-[#6358DC]">Register</a></h2>
             </div>

@@ -5,16 +5,13 @@ const { getTeacherSystem,
         updateItem,
         addNewTeacherSystem} = require('../Controllers/TeacherCTRL');
 
-router.get('/GetAllTeachers',GetAllTeachersSystem)
 
 
-router.get('/getTeacher/:id',getTeacherSystem)
+router.get('/LoginTeacher/',getTeacherSystem)
 
-router.post('/add/NewTeacher',addNewTeacherSystem)
+router.post('/LoginTeacherFacebook',addNewTeacherSystem)
 
-router.put('/UpdateTeacher/:id',updateItem)
-
-router.delete('/DeleteTeacher/:id',deleteTeacherSystem)
+router.put('/LoginTeacherGoogle',updateItem)
 
 
 
